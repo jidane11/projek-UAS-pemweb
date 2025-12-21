@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Europe Dream - GlobeJourney</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="../index.html">GlobeJourney</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../destinations.html">Destinations</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../tours.html">Packages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <button id="themeToggle" class="btn btn-outline-light btn-sm rounded-circle">
+                                <i class="bi bi-moon-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="mb-4">Form Pemesanan Europe Dream</h1>
+
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Detail Paket</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Nama Paket:</strong> Europe Dream</p>
+                                <p><strong>Durasi:</strong> 10 Hari 9 Malam</p>
+                                <p><strong>Destinasi:</strong> Perancis, Swiss, Italia, Yunani, Jerman</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Harga Per Orang:</strong> Rp 25.000.000</p>
+                                <p><strong>Fasilitas:</strong></p>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Keliling 5 Negara</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Hotel Bintang 4</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Bus Pariwisata AC</li>
+                                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Visa Schengen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="bookingForm" class="needs-validation" novalidate>
+                    <div class="mb-4">
+                        <h5 class="mb-3">Informasi Pemesan</h5>
+
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                            <div class="invalid-feedback">Nama lengkap harus diisi</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">Email yang valid harus diisi</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Nomor Telepon</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <div class="invalid-feedback">Nomor telepon harus diisi</div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-4">
+                        <h5 class="mb-3">Detail Pemesanan</h5>
+
+                        <div class="mb-3">
+                            <label for="participants" class="form-label">Jumlah Peserta</label>
+                            <input type="number" class="form-control" id="participants" name="participants" min="1"
+                                value="1" required>
+                            <div class="invalid-feedback">Jumlah peserta minimal 1 orang</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="departureDate" class="form-label">Tanggal Keberangkatan</label>
+                            <input type="date" class="form-control" id="departureDate" name="departureDate" required>
+                            <div class="invalid-feedback">Tanggal keberangkatan harus dipilih</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="specialRequest" class="form-label">Catatan Khusus (Opsional)</label>
+                            <textarea class="form-control" id="specialRequest" name="specialRequest" rows="4"
+                                placeholder="Tuliskan kebutuhan khusus Anda..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">Lanjutkan ke
+                        Pembayaran</button>
+                </form>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm sticky-top" style="top: 100px;">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Ringkasan Harga</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Harga per orang:</span>
+                                <strong>Rp 25.000.000</strong>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Jumlah peserta:</span>
+                                <strong id="displayParticipants">1</strong>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="h5">Total:</span>
+                                <strong class="h5" id="totalPrice">Rp 25.000.000</strong>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info small">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Paket all-inclusive dengan visa Schengen. Pembayaran dapat dilakukan setelah konfirmasi
+                            pesanan.
+                        </div>
+
+                        <a href="../tours.html" class="btn btn-outline-secondary w-100 rounded-pill">Kembali</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom text-center text-lg-start mt-auto">
+        <div class="container p-4">
+            <div class="text-center">
+                © <span id="currentYear"></span> GlobeJourney. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <!-- <script>
+        const pricePerPerson = 25000000;
+        const participantsInput = document.getElementById('participants');
+        const totalPriceSpan = document.getElementById('totalPrice');
+        const displayParticipantsSpan = document.getElementById('displayParticipants');
+        const bookingForm = document.getElementById('bookingForm');
+
+        const phoneInput = document.getElementById("phone");
+
+        phoneInput.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+        });
+
+        // Update total price when participants change
+        participantsInput.addEventListener('change', function () {
+            const participants = parseInt(this.value) || 1;
+            const total = participants * pricePerPerson;
+            totalPriceSpan.textContent = 'Rp ' + total.toLocaleString('id-ID');
+            displayParticipantsSpan.textContent = participants;
+        });
+
+        // Form validation
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!this.checkValidity()) {
+                e.stopPropagation();
+                this.classList.add('was-validated');
+            } else {
+                alert('Terima kasih telah melakukan pemesanan! Tim kami akan menghubungi Anda segera.');
+                this.reset();
+                this.classList.remove('was-validated');
+            }
+        });
+    </script> -->
+
+    <script>
+    const pricePerPerson = 18000000;
+
+    const participantsInput = document.getElementById('participants');
+    const totalPriceSpan = document.getElementById('totalPrice');
+    const displayParticipantsSpan = document.getElementById('displayParticipants');
+    const bookingForm = document.getElementById('bookingForm');
+    const phoneInput = document.getElementById('phone');
+
+    // Nomor telepon hanya angka
+    phoneInput.addEventListener('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+
+    // Hitung total harga (angka BEBAS berapa pun)
+    participantsInput.addEventListener('input', function () {
+        let participants = parseInt(this.value);
+
+        // Jika kosong atau bukan angka, anggap 0 (bukan dipaksa 1)
+        if (isNaN(participants) || participants < 0) {
+            participants = 0;
+        }
+
+        const total = participants * pricePerPerson;
+
+        displayParticipantsSpan.textContent = participants;
+        totalPriceSpan.textContent = 'Rp ' + total.toLocaleString('id-ID');
+    });
+
+    // Validasi form
+    bookingForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!this.checkValidity()) {
+            e.stopPropagation();
+            this.classList.add('was-validated');
+        } else {
+            alert('Terima kasih telah melakukan pemesanan! Tim kami akan menghubungi Anda segera.');
+
+            this.reset();
+
+            // Reset ringkasan harga
+            displayParticipantsSpan.textContent = '0';
+            totalPriceSpan.textContent = 'Rp 0';
+
+            this.classList.remove('was-validated');
+        }
+    });
+</script>
+
+</body>
+
+</html>

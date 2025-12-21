@@ -95,43 +95,83 @@
             </div>
         </section>
         <!-- Popular Destinations Preview -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-5">Destinasi Populer</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card destination-card h-100">
-                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" class="card-img-top" alt="Bali" style="height: 250px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Bali, Indonesia</h5>
-                                <p class="card-text">Nikmati keindahan pantai dan budaya Bali yang memukau.</p>
-                                <a href="destinations.html" class="btn btn-outline-primary stretched-link">Lihat Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card destination-card h-100">
-                            <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e" class="card-img-top" alt="Swiss" style="height: 250px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Alps, Swiss</h5>
-                                <p class="card-text">Petualangan musim dingin di pegunungan Alpen yang menakjubkan.</p>
-                                <a href="destinations.html" class="btn btn-outline-primary stretched-link">Lihat Detail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card destination-card h-100">
-                            <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9" class="card-img-top" alt="Venice" style="height: 250px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">Venice, Italia</h5>
-                                <p class="card-text">Romantisme kota air dengan gondola yang legendaris.</p>
-                                <a href="destinations.html" class="btn btn-outline-primary stretched-link">Lihat Detail</a>
-                            </div>
-                        </div>
+        <!-- Popular Destinations Preview -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Destinasi Populer</h2>
+
+        <div class="row g-4">
+
+            <!-- Bali -->
+            <div class="col-md-4">
+                <div class="card destination-card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80"
+                         class="card-img-top"
+                         style="height:250px; object-fit:cover;">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-success mb-2">Asia</span>
+                        <h5>Bali, Indonesia</h5>
+                        <p>Nikmati keindahan pantai dan budaya Bali yang memukau.</p>
+                        <a href="destinations.html"
+                           class="btn btn-outline-primary btn-sm mt-auto">
+                            Lihat Detail
+                        </a>
+                        <a href="destinations/bali.html"
+                           class="btn btn-outline-primary btn-sm mt-auto">
+                            Lihat Paket
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Swiss -->
+            <div class="col-md-4">
+                <div class="card destination-card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80"
+                         class="card-img-top"
+                         style="height:250px; object-fit:cover;">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-info mb-2">Eropa</span>
+                        <h5>Alps, Swiss</h5>
+                        <p>Petualangan musim dingin di pegunungan Alpen.</p>
+                        <a href="destinations.html"
+                           class="btn btn-outline-primary btn-sm mt-auto">
+                            Lihat Detail
+                        </a>
+                        <a href="destinations/swiss.html"
+                           class="btn btn-outline-primary btn-sm mt-auto">
+                            Lihat Paket
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venice -->
+            <div class="col-md-4">
+                <div class="card destination-card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=80"
+                         class="card-img-top"
+                         style="height:250px; object-fit:cover;">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-info mb-2">Eropa</span>
+                        <h5>Venice, Italia</h5>
+                        <p>Romantisme kota air dengan gondola legendaris.</p>
+                        <a href="destinations.html"
+                           class="btn btn-outline-primary btn-sm mt-auto">
+                            Lihat Detail
+                        </a>
+                        <a href="destinations/venice.html"
+                           class="btn btn-outline-primary btn-sm mt-auto">
+                            Lihat Paket 
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
     </main>
     <!-- Footer -->
     <footer class="footer-custom text-center text-lg-start mt-auto">
