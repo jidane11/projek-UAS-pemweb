@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        --dark-bg: #212529;
+        --dark-text: #f8f9fa;
+      }
+      body.dark-mode {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+      }
+      body.dark-mode .card, 
+      body.dark-mode .list-group-item,
+      body.dark-mode .modal-content {
+        background-color: #343a40;
+        color: #f8f9fa;
+        border-color: #454d55;
+      }
+      body.dark-mode .navbar-light {
+        background-color: #343a40 !important;
+      }
+      body.dark-mode .navbar-light .navbar-brand,
+      body.dark-mode .navbar-light .nav-link {
+        color: #f8f9fa !important;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Railway Info System</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kereta Informatif - Informasi Perjalanan Kereta Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🚂 Kereta Informatif</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedules.html">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="train-types.html">Tipe Kereta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stations.html">Stasiun</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="safety.html">Keselamatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-dark ms-2" id="darkModeToggle" data-testid="button-dark-mode">
+                            🌙
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section with Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Kereta Argo Bromo" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                    <h2>Argo Bromo Anggrek</h2>
+                    <p>Layanan Eksekutif Premium Indonesia</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.istockphoto.com/id/2157113127/id/foto/wanita-asia-duduk-di-skytrain-metro-menggunakan-teleponnya-dan-memalingkan-muka.jpg?s=612x612&w=0&k=20&c=dEjfU0jyy0fHVxPcm-Q-TlydRLuQ81TdgYMD6tYukuc=" class="d-block w-100" alt="Kereta Modern" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                    <h2>Teknologi Terdepan</h2>
+                    <p>Kenyamanan Perjalanan Anda Adalah Prioritas Kami</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.istockphoto.com/id/2191142701/id/foto/wanita-bisnis-asia-memegang-folder-dokumen-sambil-menunggu-kereta-api-di-stasiun-kereta-api.jpg?s=612x612&w=0&k=20&c=0_QrXdIqiejrnv6dayPNFyufb-t2M_jL5rRQTVQSayg=" class="d-block w-100" alt="Stasiun Kereta" style="height: 500px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                    <h2>Jangkauan Nasional</h2>
+                    <p>Menghubungkan Seluruh Indonesia</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- Welcome Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Cepat & Nyaman</h5>
+                            <img src="data:image/webp;base64,UklGRrALAABXRUJQVlA4IKQLAACQNQCdASqhALQAPp1GnUulo6KhpXgLQLATiWlu3WBpKb+ov+H7W/8l4S/ivzH+F/sf7bck7qnzQ/kX2k/Y/3z0U71fjzqEfjP86/z35f8DaAD9H/r/+v+2/4wPo/MrxAP1l9Pe9T839gD+b/3b1Z/5j/4f5PzrfoH+N/+H+k+An+d/279hfbI9hX7Z///3RP2I/+5f77lARCV8uT+BFGQmbgfQUBEJUlTQJp9+7A81EsvaklpsnpJaZ701v66I3I+acILeAXa2NLiE6j+G8eqqwPxRcvUY+Icc6rPZoZOCAN8unyk5FYQ0iGHtwVHkDETQfaoBYYl0zoMsXIF0lP4IyM8fYinFu1udhpnLgcXxIl0UH9A50iCveS04PPdjEOZ0RuzaZaUEvhTs2vv9R/wI94gnb3GzESatFR8CjtCM7XZlFcHmwaRyb8JMl7RBrrZpIngrNa7ZE/NCB7oqH8/8xV4pf8tttE8iKAwSf7XMlL+GlALtxrloXCkZGgziEnYXbsUU8L/NpKshmco77/eb+/8w68CRXxEvo1cBgje7DjyAdokWN7zwLxfETdPMF8RN08wXUAD++raAY/g/k8DJt9f0vO9KG/fH6ToJ+ttfG11C72pDcg93tDXG01Hhxf6QRYOFhBQYWaN6j+iLOreMzMB5L6WreebP5JjgicMCnNA03X8VP13k/+Oo7cZbky/Rpv+KH1E10aB/+lN38Xf7iUoG1ZPn/jZRrOf6zBaIGURrqxkhJCga1L/CzBXAXgguA22EqjqYiQ1bSpnuhmjJAi+nQWDKfkAfd7i8MgLcQfyEQqdLioIP1P2CcswZllNxcXmBnJiVNfs4OiJK8T/tTEc0T7yBI+/anw9YLrIb3X6hsDuzNkERYtCdtaWracRYV7XXVsbmjbog4NYqfeS0asJKjj/2UrmW+vjea1C/YyS6S1y2PAEj7t1hXoAshFtiW4hl/GvecHvriY5+S/qsvZ5jIdIC3FMMnHWLUwthjx4hIIelbXuQomM1SOp1/3ZOQLaHMtUfauPzENxtIEhTi3w+NY+kr0mzP7Gze8jzv/MKvwhTmMzae06/1rdPKgil5k7Mo2QxCkQZzAZoc4rqoQ4LkmMkNka1ra4B76kQI+PGhgzzCzomPrX2aC9jMTa20WNn+MM5S7Lu0b+EXmFjS97jCuR5cThsxyPF5sqT0MmV2HXKp1iNAZD8A0cxBUL7QDKPBe1BOosMxFwb2UZIW2wgpgz+AspZLjmgtDE+81Tukzy9D+YMfy7birp2muctNm9toen0npxzWm9WBE1FOaaAgHm74/MhRSWwwiyOA0qGJMxdwEzcvZFXC3Fv3eMi8CYEcjRnrDv37/A1DDd6om/cHyOzU3+DE7yuXY8JaxTS+K87xPgayZyMQF/vBR3YRvI5fVu7VtVvvchaYSqjkEaDMvGOxruORy9QlXPLMYm1aBiTAHk9IvVEY5ue+r4TqBndYCx3v30oO5k5dKOQrjTJxsPTtckmbcPvye52jAmli/mjOjqd8gw6up0HyEjDtjYxaXwTzz3G6OfhhbEQPtWf2gzgP/2BUXv/OTO1hCSK95xDZaHoqD6wZtb06+iMlXvjmmuIJ/lssXPxQ55XLTRkB9/eLpAaE1gs3O8NcDzpB+WFUXgyQvNWh/czWgLPKH//s2IWAXRnCI3+wYR3GnN6q9dGnpFq2o/vMTZw8Kz3G++dFnd++ZV0b7L3RQmR3NYSImkdC52JOhMj29ntUgfgNTfwdqLecY+mztvwwNKVOXLTCGbHaUH3f+mqiy4TNhrop6y2+I0vny7HqGiuk22VGNhoOV/+lVYsFLxXzXkwG2ZddCjq69TbnxlqxOlzoZ2R2utULHqZVV9xEWXBm/bRa6/Jx+XB7/rwhh0SI61e0dzdscuWYaWxnEN8t0nKwwKL/dVPI2+DAizKm48hbYIOkG/dljzqb+84X5he4zkdn8fJhcVUFbxFZ4O/r1unpYdvvzsr7kg1YO8ACy0dMg0AAl3xOJaj6sP/iedUiNktWK+uRDg4LQ52gl6bVeY8+g93+R4yK5HGefwZHGsn6uBuTMhwrlUL+14MyjSjhjNJO/KK3A2It+WLf6tO+zrdrJPTIjYpLNya+QrmI4NyEj1UgS4qOtcgZOmqbmMz4vaj2dJuQXPmCWqkaoOFODRwyB91OuItl98MuAdXJocOMmRXZ5E63gDbCtofbQ/mPrBb5wmU1oZ9YMYBxDx/igokuSFf5J5DsYXpVgAnXXac8aB8DKuepd/zvAqbd9MUA94K87b3uvncxeRfJxWokeIA1lkP7pN/15GyamBwDk9x3MJCwOFsEM+MA0HRL/z702zeeiq1Z+8IoYWWNn+q+AsdglFihaAAQVGYQAvSnTV2B3J8sKre5r+h4OE2xLyTMJiqQ6vBzw2CW5AscS1xfpziKkuPvRw7Yg+JyTCkNaVSs3pZnI+hxk4gJOt6P5WqU+TJuqFS3AWD+JdhnJtnto4t1j/MGAQp8dg3XgmN/oWPlt9iJUxJdUg/WiLPEFQqQaWhLZQI8cpudTgU10WFRXigDUiiZGxaUc8wmeKEWLM90A/2KIroIZw0jj5DQ4UPVtN41aMP4BVkwfEl6L7DGH5JJwFPMBsuWRf5iupfvkO7grB++SrggA/NrPZ3a2hr/5q5NIs/kn0cWD+CfBBd+BHl4j43n6kzG459id7e8BEqiqCfVohf0ewx58pSdLeEBpBjzA5DfYgSK6l4yvvYR9fm5W9Br1Cqxhm2GVK9LfdLLhFPmWAHQfHoEP0ApZwSSTh9/AzSPztdsMK23CJrBLtG/ZzyXnZgptzzjTgU9LIiiFTdEMVYqHiisjoaNLozU7TZCQiozwdGjUMXKowBlZb+U+FkQglRNLFEkOpaloRUL5xA7aaMI6hHSKcRe4vI9O3cBUac8+TfLzw4WH0UX1cUH3S2GmS97Z+/5MA4U+bu9x0QrrXbN1sPOp/2PwXwnchbzrKT/hz+3HMeAi7V7nNEFoiY5c2bEIOo9LfoKySU/9PS3fAA/kJ6SklatLFZlt1R0qlGkSd9033EkKtlh5HCAC0bH11n14SaoY9+TBlZJ4f2ERUPPUshIL7wBRw14nyD2M2YLZVvNf+6vEU99MIyBsbfTqKbEEQ3JxqVJX2iIRXC8DT58eGH5Lg/ah9/b2lpQSgb/MiOu/dM/jghRP04dF83oSkqoDip90XOjZM7+eU9It1Byq0NQ0dlVY+IirIqEUzpls2++dCCaz88wlIDb3p9rwZz+Jmhjrp5184oDJNjAAJZMJ9+l5phvjcRPjmUhFPEqUApVsVyHuSm/SbPJ/rP6R7+DQ+oSkduMqnxi4nAd/wuNZqwe3jVExpojtqlc1oRNH77rm4dWtJ4yB3+sibmXme3b5Go3Pa2DJh9CX0al54dOfFC2DMBciYy4UVkOVed/oKg7d8wfGlF8EVvjwu5s8xFUN7n93ZUCNjwpWUt3yjl3dzm1E90fqIDEiOuJOJ0De/NpcBX7aAHBYNfzhsxppRVP6DBI1S35VLB7HEHXqVf4usgd1xnlBKsxlooyHinJmzQxZZFqe/fpC/Su7MKqkUCmrHwgDUqjiurReJWeRF1mbLg3fNGOVi5erWvkfjAp/oWkETYC/zSN1V/wpddduUc/9FR3lDlOX6MomwZEEpaTn1k1qWI2AYZcHEXwu5mZOZ/HV/aqCDJ1yleSQ0oC066/qnRHkmPdQ65zEMKWgZdWqOre5vEs2AY707lUwJqMvq1oNSvCcptWxs+08Si8z/SCe5qfJF30FjNSgRzR8Gbzi4StktqFWUgYbho1z3ARs+vunljUPppGaudhQiSrB52/tl9impdZS2Lx7EjVYhZyGZIhcUymBSi6ESjy3fPfRscl3iCotdDKUy8QQGQEQo/lVlS3aftzFQCwPDz7vEZJj0G2hq9So4iQLyLNrrwTF0DNyAg7imgAAxoAAAA" alt="Kenyamanan" class="img-fluid mb-3" style="max-height: 150px;">
+                            <p class="card-text">Perjalanan yang aman dan tepat waktu dengan fasilitas kelas dunia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Harga Terjangkau</h5>
+                            <img src="https://th.bing.com/th/id/OIP.4qVbStwH3_588bKOq6I2ZwHaHa?w=194&h=194&c=7&r=0&o=7&pid=1.7&rm=3" alt="Harga" class="img-fluid mb-3" style="max-height: 150px;">
+                            <p class="card-text">Berbagai pilihan kelas dengan harga yang kompetitif untuk semua kalangan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Layanan Prima</h5>
+                            <img src="data:image/webp;base64,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" alt="Layanan" class="img-fluid mb-3" style="max-height: 150px;">
+                            <p class="card-text">Tim profesional siap membantu Anda 24/7 untuk kenyamanan maksimal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Trains -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-testid="heading-featured-trains">Kereta Unggulan Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Argo Bromo Anggrek" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Argo Bromo Anggrek</h5>
+                            <p class="card-text">Kereta kelas Eksekutif rute Jakarta-Surabaya dengan fasilitas premium.</p>
+                            <a href="train-types.html" class="btn btn-primary" data-testid="button-learn-argo">Pelajari Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="https://media.istockphoto.com/id/469496354/id/foto/mass-rapid-transit-kereta-mrt-singapura.jpg?s=612x612&w=0&k=20&c=GtiYllI4PUJszLewb573eghql7f5MScIo8_0MHMMtyo=" class="card-img-top" alt="Gajayana" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Gajayana</h5>
+                            <p class="card-text">Kereta Eksekutif rute Malang-Jakarta dengan desain modern dan nyaman.</p>
+                            <a href="train-types.html" class="btn btn-primary" data-testid="button-learn-gajayana">Pelajari Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="https://media.istockphoto.com/id/1659485972/id/foto/kereta-api-diesel-dengan-transportasi-umum-tradisional-gaya-thailand-untuk-kereta-komuter.jpg?s=612x612&w=0&k=20&c=4rXKR2FQw138QgbBww3PJWMd13NBgyEiIrs8zvL6BQM=" class="card-img-top" alt="Jayabaya" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Jayabaya</h5>
+                            <p class="card-text">Kereta kelas Ekonomi dengan harga terjangkau untuk perjalanan jauh.</p>
+                            <a href="train-types.html" class="btn btn-primary" data-testid="button-learn-jayabaya">Pelajari Lebih Lanjut</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Pesan Tiket Anda Sekarang</h2>
+            <p class="lead mb-4">Jangan lewatkan kesempatan untuk menikmati pengalaman perjalanan yang tak terlupakan.</p>
+            <a href="schedules.html" class="btn btn-light btn-lg" data-testid="button-book-now">Lihat Jadwal & Pesan</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Kereta Informatif</h5>
+                    <p>Sistem informasi terpadu untuk perjalanan kereta api di Indonesia.</p>
+                    <a href="https://example.com" class="text-decoration-none text-white-50">Kunjungi Website Resmi</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li><a href="safety.html" class="text-white-50 text-decoration-none">Keselamatan</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Kontak</h5>
+                    <p class="text-white-50">
+                        Email: info@keretainformatif.id<br>
+                        Phone: +62-21-1234567<br>
+                        Jam Operasional: 24/7
+                    </p>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Kereta Informatif. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>

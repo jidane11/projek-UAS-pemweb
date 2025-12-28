@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Kereta - Kereta Informatif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .train-card {
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .train-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .train-img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .train-card .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .train-card .card-text {
+            min-height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🚂 Kereta Informatif</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedules.html">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="train-types.html">Tipe Kereta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stations.html">Stasiun</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="safety.html">Keselamatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-dark ms-2" id="darkModeToggle" data-testid="button-dark-mode">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h1 data-testid="heading-train-types">Tipe Kereta Kami</h1>
+                <p class="lead">Pilihan kelas untuk berbagai kebutuhan perjalanan Anda</p>
+            </div>
+        </section>
+
+        <!-- Train Types Grid -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Eksekutif -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm h-100 train-card">
+                            <img src="https://media.istockphoto.com/id/584784714/id/foto/kereta-wisata-listrik-dan-eiger-north-face-bernese-oberland-swiss.jpg?s=612x612&w=0&k=20&c=kOocb2U2QK8M2XzWzL8D6Aw0SU-Czfc9Wp_1127divI=" class="card-img-top" alt="Kelas Eksekutif" style="height: 250px; object-fit: cover;" data-testid="image-eksekutif">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Kelas Eksekutif</h5>
+                                <p class="card-text">
+                                    Kenyamanan premium dengan fasilitas terlengkap untuk perjalanan bisnis dan liburan Anda.
+                                </p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success">WiFi Gratis</span>
+                                    <span class="badge bg-info">AC</span>
+                                    <span class="badge bg-warning">Makanan</span>
+                                </div>
+                                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalEksekutif" data-testid="button-modal-eksekutif">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bisnis -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm h-100 train-card">
+                            <img src="https://media.istockphoto.com/id/2189082664/id/foto/kereta-listrik-modern-merah-yang-berjalan-di-sepanjang-rel-kereta-api-berkelok-kelok-melalui.jpg?s=612x612&w=0&k=20&c=xXCbQwOio1O6RPHGMbxEjtN1ecSjcwAFvFsQTjJdLd8=" class="card-img-top" alt="Kelas Bisnis" style="height: 250px; object-fit: cover;" data-testid="image-bisnis">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">Kelas Bisnis</h5>
+                                <p class="card-text">
+                                    Kenyamanan standar dengan harga yang kompetitif untuk perjalanan reguler Anda.
+                                </p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success">WiFi</span>
+                                    <span class="badge bg-info">AC</span>
+                                    <span class="badge bg-secondary">Minuman</span>
+                                </div>
+                                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalBisnis" data-testid="button-modal-bisnis">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ekonomi -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm h-100 train-card">
+                            <img src="https://media.istockphoto.com/id/813915712/id/foto/kereta-mrt-malaysia.jpg?s=612x612&w=0&k=20&c=DdoA5MchW1O4l_V00CYswhTFG3JcZbmJaBnhMuNoqXE=" class="card-img-top" alt="Kelas Ekonomi" style="height: 250px; object-fit: cover;" data-testid="image-ekonomi">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Kelas Ekonomi</h5>
+                                <p class="card-text">
+                                    Harga terjangkau untuk perjalanan singkat dan menengah dengan kenyamanan dasar.
+                                </p>
+                                <div class="mb-3">
+                                    <span class="badge bg-info">Kursi Nyaman</span>
+                                    <span class="badge bg-secondary">AC</span>
+                                    <span class="badge bg-dark">Toilet</span>
+                                </div>
+                                <button class="btn btn-info w-100" data-bs-toggle="modal" data-bs-target="#modalEkonomi" data-testid="button-modal-ekonomi">
+                                    Lihat Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Perbandingan Fasilitas</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" data-testid="table-comparison">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Fasilitas</th>
+                                <th class="text-center">Eksekutif</th>
+                                <th class="text-center">Bisnis</th>
+                                <th class="text-center">Ekonomi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>WiFi Gratis</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AC (Pendingin Ruangan)</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center text-success">✓</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kursi Reclining</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Makanan Gratis</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Minuman Gratis</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>USB Charging Port</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Personal Dalam/Toilet</strong></td>
+                                <td class="text-center text-success">✓</td>
+                                <td class="text-center">-</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modalEksekutif" tabindex="-1" data-testid="modal-eksekutif">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kelas Eksekutif</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Deskripsi:</strong> Kelas tertinggi dengan fasilitas lengkap dan kenyamanan maksimal.</p>
+                    <p><strong>Harga Rata-rata:</strong> Rp 600.000 - Rp 800.000</p>
+                    <p><strong>Fasilitas:</strong></p>
+                    <ul>
+                        <li>Kursi reclining premium dengan spacing luas</li>
+                        <li>Makanan dan minuman gratis</li>
+                        <li>WiFi gratis berkecepatan tinggi</li>
+                        <li>USB Charging Port di setiap kursi</li>
+                        <li>Personal toilet dan kabin pribadi</li>
+                        <li>Entertainment system</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="schedules.html" class="btn btn-primary">Cari Jadwal</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBisnis" tabindex="-1" data-testid="modal-bisnis">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kelas Bisnis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Deskripsi:</strong> Kelas menengah dengan fasilitas standard dan harga terjangkau.</p>
+                    <p><strong>Harga Rata-rata:</strong> Rp 400.000 - Rp 500.000</p>
+                    <p><strong>Fasilitas:</strong></p>
+                    <ul>
+                        <li>Kursi nyaman dengan spacing standard</li>
+                        <li>Minuman dan snack gratis</li>
+                        <li>WiFi gratis</li>
+                        <li>AC dan ventilasi baik</li>
+                        <li>Toilet umum yang bersih</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="schedules.html" class="btn btn-success">Cari Jadwal</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEkonomi" tabindex="-1" data-testid="modal-ekonomi">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kelas Ekonomi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Deskripsi:</strong> Kelas ekonomis dengan harga paling terjangkau untuk perjalanan ringan.</p>
+                    <p><strong>Harga Rata-rata:</strong> Rp 200.000 - Rp 350.000</p>
+                    <p><strong>Fasilitas:</strong></p>
+                    <ul>
+                        <li>Kursi standard yang nyaman</li>
+                        <li>AC dan ventilasi</li>
+                        <li>Toilet umum</li>
+                        <li>Akses ke vendor makanan di stasiun</li>
+                        <li>Tidak ada WiFi gratis</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="schedules.html" class="btn btn-info">Cari Jadwal</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Kereta Informatif</h5>
+                    <p>Sistem informasi terpadu untuk perjalanan kereta api di Indonesia.</p>
+                    <a href="https://example.com" class="text-decoration-none text-white-50">Kunjungi Website Resmi</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li><a href="safety.html" class="text-white-50 text-decoration-none">Keselamatan</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Kontak</h5>
+                    <p class="text-white-50">
+                        Email: info@keretainformatif.id<br>
+                        Phone: +62-21-1234567<br>
+                        Jam Operasional: 24/7
+                    </p>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Kereta Informatif. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
