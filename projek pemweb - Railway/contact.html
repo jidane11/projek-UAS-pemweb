@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Kereta Informatif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🚂 Kereta Informatif</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedules.html">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="train-types.html">Tipe Kereta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stations.html">Stasiun</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="safety.html">Keselamatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Kontak</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-dark ms-2" id="darkModeToggle" data-testid="button-dark-mode">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h1 data-testid="heading-contact">Hubungi Kami</h1>
+                <p class="lead">Kami siap membantu Anda 24/7</p>
+            </div>
+        </section>
+
+        <!-- Contact Info & Form -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Information -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Alamat</h5>
+                                <p class="card-text">
+                                    Jl. Besar No. 123<br>
+                                    Jakarta Pusat 12000<br>
+                                    Indonesia
+                                </p>
+                                <a href="https://maps.google.com" class="btn btn-sm btn-primary" data-testid="link-maps">Buka di Google Maps</a>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Telepon</h5>
+                                <p class="card-text">
+                                    <strong>+62-21-1234567</strong><br>
+                                    Senin-Jumat: 08:00-17:00<br>
+                                    Sabtu: 09:00-15:00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Email</h5>
+                                <p class="card-text">
+                                    <strong>info@keretainformatif.id</strong><br>
+                                    support@keretainformatif.id
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="col-md-8">
+                        <div class="card shadow-sm">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-4">Kirim Pesan</h5>
+                                
+                                <div id="formError" class="alert alert-danger d-none" role="alert" data-testid="alert-form-error"></div>
+                                <div id="formSuccess" class="alert alert-success d-none" role="alert" data-testid="alert-form-success">
+                                    ✓ Pesan Anda telah dikirim. Terima kasih telah menghubungi kami!
+                                </div>
+
+                                <form id="contactForm" data-testid="form-contact">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" data-testid="input-name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" data-testid="input-email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subjek</label>
+                                        <select class="form-select" id="subject" data-testid="select-subject">
+                                            <option value="">Pilih Subjek</option>
+                                            <option value="pertanyaan-umum">Pertanyaan Umum</option>
+                                            <option value="komplain">Komplain</option>
+                                            <option value="saran">Saran</option>
+                                            <option value="kerusakan-sistem">Kerusakan Sistem</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Pesan</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tulis pesan Anda di sini..." data-testid="textarea-message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100" data-testid="button-send">
+                                        Kirim Pesan
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Lokasi Kami</h2>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322835!2d106.8227!3d-6.1751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34399%3A0x5371bf0fdad2a970!2sMonas%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1234567890" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Pertanyaan Umum</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="accordion" id="contactFAQ">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Berapa waktu respon customer service?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFAQ">
+                                    <div class="accordion-body">
+                                        Kami berkomitmen merespon setiap pertanyaan dalam waktu maksimal 24 jam kerja.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Apakah layanan customer service tersedia 24/7?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                    <div class="accordion-body">
+                                        Ya, tim customer service kami tersedia sepanjang waktu untuk membantu Anda melalui email, telepon, dan live chat.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Bagaimana cara melaporkan masalah sistem?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                                    <div class="accordion-body">
+                                        Anda dapat melaporkan masalah melalui formulir kontak di halaman ini atau menghubungi support@keretainformatif.id secara langsung.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Kereta Informatif</h5>
+                    <p>Sistem informasi terpadu untuk perjalanan kereta api di Indonesia.</p>
+                    <a href="https://example.com" class="text-decoration-none text-white-50">Kunjungi Website Resmi</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li><a href="safety.html" class="text-white-50 text-decoration-none">Keselamatan</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Kontak</h5>
+                    <p class="text-white-50">
+                        Email: info@keretainformatif.id<br>
+                        Phone: +62-21-1234567<br>
+                        Jam Operasional: 24/7
+                    </p>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Kereta Informatif. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const errorAlert = document.getElementById("formError");
+    const successAlert = document.getElementById("formSuccess");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Ambil nilai input
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value.trim();
+
+        // Reset notifikasi
+        errorAlert.classList.add("d-none");
+        successAlert.classList.add("d-none");
+        errorAlert.innerHTML = "";
+
+        // Validasi
+        let errors = [];
+
+        if (name === "") errors.push("Nama wajib diisi.");
+        if (email === "") {
+            errors.push("Email wajib diisi.");
+        } else if (!email.includes("@")) {
+            errors.push("Format email tidak valid.");
+        }
+        if (subject === "") errors.push("Subjek harus dipilih.");
+        if (message === "") errors.push("Pesan tidak boleh kosong.");
+
+        // Jika error
+        if (errors.length > 0) {
+            errorAlert.innerHTML = errors.join("<br>");
+            errorAlert.classList.remove("d-none");
+            return;
+        }
+
+        // Jika sukses
+        successAlert.classList.remove("d-none");
+        form.reset();
+
+        // Auto hide setelah 5 detik
+        setTimeout(() => {
+            successAlert.classList.add("d-none");
+        }, 5000);
+    });
+});
+</script>
+
+</body>
+</html>

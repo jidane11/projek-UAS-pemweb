@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - Kereta Informatif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🚂 Kereta Informatif</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="schedules.html">Jadwal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="train-types.html">Tipe Kereta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stations.html">Stasiun</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="news.html">Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="safety.html">Keselamatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-dark ms-2" id="darkModeToggle" data-testid="button-dark-mode">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h1 data-testid="heading-news">Berita & Pengumuman</h1>
+                <p class="lead">Informasi terbaru tentang layanan kereta kami</p>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <article class="card shadow-sm train-card h-100">
+                            <img src="https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Kereta Baru" style="height: 250px; object-fit: cover;" data-testid="image-news-1">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">Desember 2024</span>
+                                <h5 class="card-title">Peluncuran Kereta Argo Bromo Anggrek Generasi Terbaru</h5>
+                                <p class="card-text">
+                                    Kami dengan bangga mengumumkan peluncuran Kereta Argo Bromo Anggrek generasi terbaru dengan teknologi yang lebih canggih dan kenyamanan yang lebih baik.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-primary" data-testid="link-news-1">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <article class="card shadow-sm train-card h-100">
+                            <img src="https://images.unsplash.com/photo-1645725677294-ed0843b97d5c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2lmaXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="WiFi" style="height: 250px; object-fit: cover;" data-testid="image-news-2">
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">November 2024</span>
+                                <h5 class="card-title">Upgrade WiFi Gratis di Semua Kereta</h5>
+                                <p class="card-text">
+                                    Semua kereta kami sekarang dilengkapi dengan WiFi 5G yang lebih cepat dan stabil untuk kenyamanan penumpang selama perjalanan.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-primary" data-testid="link-news-2">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <article class="card shadow-sm train-card h-100">
+                            <img src="https://images.unsplash.com/photo-1681048426476-50005daf0666?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3Rhc2l1biUyMGJhcnV8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Stasiun Baru" style="height: 250px; object-fit: cover;" data-testid="image-news-3">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">Oktober 2024</span>
+                                <h5 class="card-title">Renovasi Stasiun Utama Selesai</h5>
+                                <p class="card-text">
+                                    Renovasi besar-besaran stasiun utama di Jakarta dan Surabaya telah selesai dengan fasilitas modern dan aksesibilitas yang lebih baik.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-primary" data-testid="link-news-3">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <article class="card shadow-sm train-card h-100">
+                            <img src="https://plus.unsplash.com/premium_photo-1732658363745-b98c53296468?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVudW1wYW5nJTIwa2VyZXRhfGVufDB8fDB8fHww" class="card-img-top" alt="Program Loyalitas" style="height: 250px; object-fit: cover;" data-testid="image-news-4">
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">September 2024</span>
+                                <h5 class="card-title">Program Loyalitas Penumpang Setia Dimulai</h5>
+                                <p class="card-text">
+                                    Bergabunglah dengan program loyalitas kami dan nikmati berbagai keuntungan eksklusif seperti diskon tiket dan akses prioritas.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-primary" data-testid="link-news-4">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <article class="card shadow-sm train-card h-100">
+                            <img src="https://images.unsplash.com/photo-1634553492003-ceecfb2323bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGtlcmV0YSUyMGFwaXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Pelatihan Petugas" style="height: 250px; object-fit: cover;" data-testid="image-news-5">
+                            <div class="card-body">
+                                <span class="badge bg-danger mb-2">Agustus 2024</span>
+                                <h5 class="card-title">Pelatihan Petugas untuk Layanan Lebih Baik</h5>
+                                <p class="card-text">
+                                    Semua petugas kami telah menjalani pelatihan intensif untuk memberikan layanan customer service yang terbaik dan profesional.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-primary" data-testid="link-news-5">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <article class="card shadow-sm train-card h-100">
+                            <img src="https://images.unsplash.com/photo-1715236925656-b5a434b6248d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGtlcmV0YSUyMGFwaXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Kemampuan Alam" style="height: 250px; object-fit: cover;" data-testid="image-news-6">
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">Juli 2024</span>
+                                <h5 class="card-title">Inisiatif Ramah Lingkungan Kereta Kami</h5>
+                                <p class="card-text">
+                                    Kami telah mengimplementasikan sistem energi terbarukan di semua kereta untuk mengurangi jejak karbon dan melindungi lingkungan.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-primary" data-testid="link-news-6">Baca Selengkapnya</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscribe Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <h3 class="mb-4">Berlangganan Berita Kami</h3>
+                        <p class="mb-4">Dapatkan update terbaru tentang kereta kami langsung ke email Anda.</p>
+                        <form class="input-group">
+                            <input type="email" class="form-control" placeholder="Masukkan email Anda" data-testid="input-newsletter-email">
+                            <button class="btn btn-primary" type="button" data-testid="button-subscribe">Berlangganan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Kereta Informatif</h5>
+                    <p>Sistem informasi terpadu untuk perjalanan kereta api di Indonesia.</p>
+                    <a href="https://example.com" class="text-decoration-none text-white-50">Kunjungi Website Resmi</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+                        <li><a href="safety.html" class="text-white-50 text-decoration-none">Keselamatan</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Kontak</h5>
+                    <p class="text-white-50">
+                        Email: info@keretainformatif.id<br>
+                        Phone: +62-21-1234567<br>
+                        Jam Operasional: 24/7
+                    </p>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p>&copy; 2024 Kereta Informatif. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
